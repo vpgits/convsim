@@ -12,7 +12,6 @@ def generate_bell_curve(num_particles):
     x_min = WIDTH / 2 - 100
     x_max = WIDTH / 2 + 100
     x_values = np.linspace(x_min, x_max, num_particles)
-    print(len(x_values))
     mean = np.mean(x_values) + 1
     std_dev = np.std(x_values) / 4
     y_values = stats.norm.pdf(x_values, mean, std_dev)
